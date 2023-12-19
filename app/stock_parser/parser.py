@@ -1,4 +1,3 @@
-import time
 from .models import Stocks
 from .services.parsing_service.pars_service import format_number, get_price
 from .services.parsing_service.pars_config import *
