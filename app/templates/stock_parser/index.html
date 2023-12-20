@@ -24,13 +24,16 @@
         <li class="nav-item">
           <a href="{% url 'index_stocks_page' %}" class="nav-link {% if request.path == '/index_stocks/' %}active{% endif %}">Index stocks</a>
         </li>
+        <li class="nav-item">
+          <a href="{% url 'crypto_page' %}" class="nav-link {% if request.path == '/crypto/' %}active{% endif %}">Crypto</a>
+        </li>
       </ul>
     </header>
       <main>
         <ul class="list-group list-group-horizontal list-group-header" style="font-weight: bold;">
             <li class="list-group-item list-group-item-header" style="width: 200px;">Ticker</li>
             <li class="list-group-item list-group-item-header" style="width: 100px;">Price</li>
-            <li class="list-group-item list-group-item-header" style="width: 100px;">Change Percent</li>
+            <li class="list-group-item list-group-item-header" style="width: 100px;">Change, %</li>
         </ul>
         {% for stock in stock_list %}
           <ul class="list-group list-group-horizontal">

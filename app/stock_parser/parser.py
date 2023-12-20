@@ -1,3 +1,5 @@
+import time
+
 from .models import Stocks
 from .services.parsing_service.pars_service import format_number, get_price
 from .services.parsing_service.pars_config import *
@@ -23,9 +25,12 @@ def create_data(category, stock_category):
 
 def parsing():
     print('Start app')
-    create_data('Валюты', currencies)
-    create_data('Товары', comodities)
-    create_data('Индексы', index)
-    print('All ok')
+    while True:
+        create_data('Валюты', currencies)
+        create_data('Товары', comodities)
+        create_data('Индексы', index)
+        print('All ok')
+
+        time.sleep(900)
 
 

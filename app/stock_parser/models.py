@@ -12,8 +12,3 @@ class Stocks(models.Model):
 
     def save_to_database(self):
         self.save()
-
-
-
-
-
